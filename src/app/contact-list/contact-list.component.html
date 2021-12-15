@@ -1,0 +1,8 @@
+<ul>
+  <li class="list-group-item" *ngFor="let contact of contacts">
+    <div class="nameContact" (click)="getContactDetail(contact)">
+      <h3>{{contact.firstName}}</h3>
+    </div>
+  </li>
+</ul>
+

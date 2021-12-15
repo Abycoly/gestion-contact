@@ -1,0 +1,23 @@
+<div>
+  <!-- [formGroup]="contactForm" fait la liaison avec le contactForm -->
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmitForm()" >
+    <div>
+      <label for="firstName">Nom complet</label>
+      <input type="text" name="" id="firstName" formControlName="firstName">
+    </div>
+
+    <div>
+      <label for="pseudo">Pseudo</label>
+      <input type="text" name="" id="pseudo" formControlName="pseudo">
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input type="text" name="" id="email" formControlName="email">
+    </div>
+
+    <button type="submit" [disabled]="contactForm.invalid">Ajouter</button>
+    <!-- Le bouton de type  submit  déclenche l'événement  ngSubmit , déclenchant ainsi la méthode  onSubmitForm()
+      que vous allez créer dans votre TypeScript. -->
+  </form>
+</div>
